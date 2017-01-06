@@ -1,0 +1,465 @@
+
+/*====================================
+generals styles
+====================================*/
+@font-face{
+    font-family: 'Intro';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Intro'), url('../fonts/intro.woff2') format('woff2'), url('../fonts/intro.woff') format('woff'), url('../fonts/intro.ttf') format('truetype');
+}
+@font-face{
+    font-family: 'Clear Sans';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Clear Sans'), local('clearsans'), url('../fonts/clearsans.woff2') format('woff2'), url('../fonts/clearsans.woff') format('woff'), url('../fonts/clearsans.ttf') format('truetype');
+}
+@font-face{
+    font-family: 'Alexander';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Alexander'), url('../fonts/alexander.woff2') format('woff2'), url('../fonts/alexander.woff') format('woff'), url('../fonts/alexander.ttf') format('truetype');
+}
+section{
+    position: relative;
+
+    width: 100%;
+}
+ul{
+    list-style: none;
+}
+ul li a:hover{
+    text-decoration: none;
+}
+p{
+    font-family: 'Clear Sans', sans-serif;
+    font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Intro', sans-serif;
+
+    margin: 0;
+}
+h1{
+    font-size: 41px;
+}
+h2{
+    font-size: 35px;
+}
+h3{
+    font-size: 27px;
+}
+h4{
+    font-size: 28px;
+}
+h5{
+    font-size: 24px;
+}
+h6{
+    font-size: 16px;
+}
+
+/*========================================
+header
+========================================*/
+header{
+    height: 680px;
+
+    background: url(../img/header.jpg);
+    background-size: cover;
+}
+.logo{
+    float: left;
+
+    padding: 20px 0 0 0;
+}
+.menu{
+    float: right;
+
+    padding: 10px 0 0 0;
+}
+.menu ul li{
+    float: left;
+
+    margin-right: 30px;
+}
+.menu ul li a{
+    font-family: 'Clear Sans', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+}
+.menu ul li a:focus{
+    text-decoration: none;
+}
+/*делаем ссылки плавно подчеркивающимися*/
+.menu ul li a:after{
+    position: relative;
+    top: 5px;
+    left: 10%;
+
+    display: block;
+
+    width: 0;
+    height: 4px;
+
+    content: '';
+    -webkit-transition: all 1s linear;
+       -moz-transition: all 1s linear;
+         -o-transition: all 1s linear;
+            transition: all 1s linear;
+
+   
+}
+.menu ul li a:hover:after,
+.menu ul li a:active:after{
+    width: 80%;
+}
+/*/делаем ссылки плавно подчеркивающимися*/
+/*делаем пункты меню активными при скролле*/
+#top-menu li.active a:after{
+    position: relative;
+    top: 5px;
+    left: 10%;
+    display: block;
+    width: 80%;
+    height: 4px;
+    content: '';    
+}
+/*/делаем пункты меню активными при скролле*/
+.fa-bars{
+    font-size: 20px;
+
+    position: absolute;
+    top: 25px;
+    right: 40px;
+
+    display: none;
+
+    cursor: pointer;
+
+    color: #fff;
+}
+.main_title{
+    padding: 100px 0 0 0;
+}
+
+.main_title p{
+    color: #fff;
+}
+.forma{
+    margin-top: 20px;
+    margin-left: -15px;
+}
+.forma input{
+    width: 100%;
+    height: 42px;
+    padding-left: 20px;
+
+    border: none;
+    border-radius: 5px;
+}
+.forma button{
+    font-size: 18px;
+    font-weight: bold;
+
+    width: 200px;
+    height: 42px;
+    margin-top: 20px;
+
+    -webkit-transition: All .5s ease;
+       -moz-transition: All .5s ease;
+         -o-transition: All .5s ease;
+            transition: All .5s ease;
+
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background: #ffc000;
+}
+.forma button:hover{
+    color: #333;
+    background-color: #e6e6e6;
+}
+.container-fluid{
+    top: -80px;
+
+    transition: top 1s;
+}
+.container-fluid.fixed{
+    position: fixed;
+    z-index: 99;
+    top: 0;
+
+    width: 100%;
+    height: 80px;
+
+    background: #000;
+}
+@media(max-width:992px){
+    .menu ul li{
+        margin-right: 20px;
+    }
+}
+@media(max-width:767px){
+    .menu{
+        display: none;
+    }
+    .fa-bars{
+        display: block;
+    }
+    .main_title h1{
+        font-size: 33px;
+    }
+}
+/*========================================
+director
+========================================*/
+#director{
+    padding: 85px 0 0 0;
+}
+.directors_foto{
+    width: 100%;
+    margin-top: 57px;
+}
+.hello_text p{
+    color: #909090;
+}
+/*========================================
+tarifi
+========================================*/
+
+#tarifi{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    padding: 70px 0;
+    background-image: url(../img/BG2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#tarifi h1{
+    margin-top: 70px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#tarifi h4{
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    color: #ffc000;
+}
+#tarifi h6{
+    text-align: center;
+}
+#tarifi p{
+    text-align: center;
+
+    color: #fff;
+}
+
+/*========================================
+company
+========================================*/
+#company{
+    padding: 70px 0;
+
+    text-align: center;
+}
+#company h1{
+    color: rgb(169, 169, 169);
+}
+#company h1 span{
+    color: #000;
+}
+#company p{
+    font-size: 18px;
+
+    margin-bottom: 50px;
+
+    color: rgb(169, 169, 169);
+}
+.preimushestvo{
+    padding-left: 105px;
+
+    text-align: left;
+}
+.preimushestvo p{
+    fontcss-size: 15px !important;
+}
+.preimushestvo h5{
+    color: #808080;
+}
+.fa-check-circle{
+    font-size: 80px;
+
+    float: left;
+}
+/*========================================
+auto
+========================================*/
+#auto{
+    position: relative;
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 70px 0;
+
+    text-align: center;
+
+    background-image: url(../img/BG2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#auto img{
+    width: 100%;
+}
+#auto h1{
+    color: #fff;
+}
+#auto h1 span{
+    color: #ffc000;
+}
+#auto p{
+    color: rgb(169, 169, 169);
+}
+
+/*========================================
+number
+========================================*/
+#number{
+    padding: 70px 0;
+
+    text-align: center;
+}
+#number h3{
+    color: #000;
+}
+#number h2{
+    margin-top: 30px;
+
+    color: #000;
+}
+.fa-phone-square{
+    color: #ffc000;
+}
+
+/*========================================
+slider
+========================================*/
+#slider{
+    position: relative;
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 70px 0;
+
+    background-image: url(../img/BG3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#owl-demo .item{
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    text-align: center;
+}
+#owl-demo .item img{
+    border-radius: 50%;
+}
+#owl-demo .item h5{
+    margin-top: 30px;
+
+    color: #ffc000;
+}
+#owl-demo .item p{
+    font-family: 'Alexander', sans-serif;
+    font-size: 28px;
+
+    margin: 0;
+
+    color: #fff;
+}
+/*========================================
+footer
+========================================*/
+#footer{
+    padding: 70px 0;
+
+    text-align: center;
+}
+#footer h1{
+    margin-bottom: 30px;
+
+    color: #000;
+}
+#footer h3{
+    text-align: left;
+    color: #000;
+}
+#footer h6{
+    text-align: left;
+
+    color: #909090;
+}
+.fa-envelope{
+    color: #ffc000;
+}
+#footer button{
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-top: 40px;
+    padding: 20px 42px;
+
+    -webkit-transition: All .5s ease;
+       -moz-transition: All .5s ease;
+         -o-transition: All .5s ease;
+            transition: All .5s ease;
+
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background: #ffc000;
+}
+#footer button:hover{
+    color: #333;
+    background-color: #e6e6e6;
+}
+/*========================================
+copyright
+========================================*/
+#copyright{
+    padding: 25px;
+
+    text-align: center;
+
+    color: #fff;
+    background: #181413;
+}
+
+
+@media(max-width:992px){
+    .revealator-slideup,
+    .revealator-zoomout,
+    .revealator-rotateleft,
+    .revealator-duration10{
+        display: none;
+    }
+}
+
+

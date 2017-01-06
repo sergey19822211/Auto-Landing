@@ -1,0 +1,24 @@
+.menu ul li a{
+	color: #5a9bd1;
+}
+.menu ul li a:after{
+	 background-color: #5a9bd1;
+}
+.main_title h1{
+    color: #5a9bd1;
+}
+#tarifi h1{
+	color: #5a9bd1;
+}
+#tarifi h6{
+	 color: #5a9bd1;
+}
+#auto h5{
+    color: #5a9bd1;
+}
+#top-menu li.active a:after{
+	background-color: #5a9bd1;
+}
+.circle{
+	color: #5a9bd1;
+}
